@@ -1,20 +1,31 @@
 import clsx from 'clsx';
+import { useState, useEffect } from 'react';
 
 import CTA from '@/component/button/CTA';
+import InfoModal from '@/component/modal/InfoModal';
+import SubscribeModal from '@/component/modal/SubscribeModal';
 
 export default function ComingSoon() {
+
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
 
   const handleSubscribe = () => {
 
     // open modal
-
+    setIsSubscribeOpen(true);
   }
 
   const handleInfo = () => {
 
     // open modal
-
+    setIsInfoOpen(true);
   }
+
+  // for when there are query params
+  useEffect(() => {
+
+  }, []);
 
 
   return (
@@ -86,6 +97,9 @@ export default function ComingSoon() {
 
 
       </div>
+
+      <InfoModal isOpen={isInfoOpen} onClose={() => setIsInfoOpen(false)} />
+      <SubscribeModal isOpen={isSubscribeOpen} onClose={() => setIsSubscribeOpen(false)} />
 
     </main>
   )
