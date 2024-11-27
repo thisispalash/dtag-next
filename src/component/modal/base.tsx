@@ -44,7 +44,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
       <div
         className={clsx(
           'fixed left-[50%] top-[50%] z-50 p-8',
-          'w-full max-w-lg translate-x-[-50%] translate-y-[-50%]',
+          'w-full max-w-3xl translate-x-[-50%] translate-y-[-50%]',
           'border border-border rounded-lg',
           'bg-card text-card-foreground',
           'shadow-lg',
