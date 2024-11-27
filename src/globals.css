@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+
+    /* Default colors for body */
+    --background: 0 0% 3%;
+    --foreground: 126 50% 33%;
+    
+    /* For muted elements */
+    --muted: 0 0% 15%;
+    --muted-foreground: 126 76% 17%;
+    
+    /* For popovers */
+    --popover: 30 33% 5%;
+    --popover-foreground: 126 50% 33%;
+    
+    /* Default border color */
+    --border: 126 50% 33%;
+    
+    /* Border color for inputs */
+    --input: 126 50% 33%;
+    
+    /* For <Card /> */
+    --card: 30 33% 5%;
+    --card-foreground: 126 50% 33%;
+    
+    /* For <Button /> */
+    --primary: 126 50% 33%;
+    --primary-foreground: 30 33% 5%;
+    
+    /* For <Button /> */
+    --secondary: 60 100% 99%;
+    --secondary-foreground: 126 50% 33%;
+    
+    /* For hover effects */
+    --accent: 60 100% 99%;
+    --accent-foreground: 126 50% 33%;
+    
+    /* For destructive actions */
+    --destructive: 343 100% 39%;
+    --destructive-foreground: 30 33% 5%;
+    
+    /* For focus ring */
+    --ring: 126 76% 17%;
+    
+    --radius: 0.5rem;
+  
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-body antialiased bg-background text-foreground;
+  }
+}
+
+/* dark green - 0a4b10, hsl(126, 76%, 17%), rgb(10, 75, 16)
+highlight - 2A7F33, hsl(126, 50%, 33%), rgb(42, 127, 51)
+
+smoky black - 100c08, hsl(30, 33%, 5%), rgb(16, 12, 8)
+outer space - 252525, hsl(0, 0%, 15%), rgb(37, 37, 37)
+
+  highlights: {
+    50: '#e6fbe7',
+    100: '#c3edc8',
+    200: '#9edfa5',
+    300: '#79d382',
+    400: '#55c660',
+    500: '#3bac46',
+    600: '#2c8636',
+    700: '#1e6025',
+    800: '#0f3915',
+    900: '#001501',
+  } */
